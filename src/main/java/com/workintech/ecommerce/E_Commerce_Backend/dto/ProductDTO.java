@@ -1,0 +1,33 @@
+package com.workintech.ecommerce.E_Commerce_Backend.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Size;
+
+public record ProductDTO(
+
+        @NotNull(message = "Product ID is required")
+        Long id,
+
+        @NotBlank(message = "Product name is required")
+        @Size(max = 100, message = "Product name must be less than 100 characters")
+        String productName,
+
+        @NotNull(message = "Price is required")
+        @PositiveOrZero(message = "Price must be zero or positive")
+        Double price,
+
+        @NotNull(message = "Quantity is required")
+        @PositiveOrZero(message = "Quantity must be zero or positive")
+        Integer quantity,
+
+        @Size(max = 500, message = "Description must be less than 500 characters")
+        String description,
+
+        @Size(max = 255, message = "Product image URL must be less than 255 characters")
+        String productImage,
+
+        @NotNull(message = "Category is required")
+        Long categoryId
+) {}
