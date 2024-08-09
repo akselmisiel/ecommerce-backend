@@ -6,12 +6,14 @@ import com.workintech.ecommerce.E_Commerce_Backend.entity.Address;
 import com.workintech.ecommerce.E_Commerce_Backend.entity.User;
 import com.workintech.ecommerce.E_Commerce_Backend.repository.AddressRepository;
 import com.workintech.ecommerce.E_Commerce_Backend.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class AddressServiceImpl implements AddressService{
 
     private AddressRepository addressRepository;

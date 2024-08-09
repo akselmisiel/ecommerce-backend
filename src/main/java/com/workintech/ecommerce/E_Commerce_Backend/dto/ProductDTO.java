@@ -7,7 +7,6 @@ import jakarta.validation.constraints.Size;
 
 public record ProductDTO(
 
-        @NotNull(message = "Product ID is required")
         Long id,
 
         @NotBlank(message = "Product name is required")
