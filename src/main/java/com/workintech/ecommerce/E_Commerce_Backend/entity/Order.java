@@ -38,7 +38,7 @@ public class Order {
     @NotNull(message = "Total price is required")
     @Positive(message = "Total price must be positive")
     @Column(name = "total_price")
-    private Integer totalPrice;
+    private Double totalPrice;
 
     @NotNull(message = "Order items cannot be null")
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)

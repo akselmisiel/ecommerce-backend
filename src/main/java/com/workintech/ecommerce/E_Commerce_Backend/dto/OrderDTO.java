@@ -7,6 +7,8 @@ import java.util.List;
 
 public record OrderDTO(
 
+        Long id,
+
         @NotBlank(message = "Order date is required")
         String orderDate,
 
@@ -16,7 +18,7 @@ public record OrderDTO(
 
         @NotNull(message = "Total price is required")
         @Positive(message = "Total price must be positive")
-        Integer totalPrice,
+        Double totalPrice,
 
         @NotNull(message = "Order items cannot be null")
         List<OrderItemDTO> orderItems,

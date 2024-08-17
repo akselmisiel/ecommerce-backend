@@ -4,6 +4,8 @@ import jakarta.validation.constraints.*;
 
 public record ProductResponseDTO(
 
+        Long id,
+
         @NotBlank(message = "Product name is required")
         @Size(max = 100, message = "Product name must be less than 100 characters")
         String productName,

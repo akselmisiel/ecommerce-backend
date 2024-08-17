@@ -84,6 +84,7 @@ public class ProductServiceImpl implements ProductService{
 
     private ProductResponseDTO convertToDTO(Product product) {
         return new ProductResponseDTO(
+                product.getId(),
                 product.getProductName(),
                 product.getPrice(),
                 product.getQuantity(),
